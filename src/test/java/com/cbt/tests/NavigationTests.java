@@ -16,7 +16,7 @@ public class NavigationTests {
         browserName.manage().window().maximize();
         browserName.get("https://www.google.com/");
         String title1 = browserName.getTitle();
-        Thread.sleep(3);
+       // Thread.sleep(3);
        // System.out.println(titlef);
         browserName.get("https://www.etsy.com/");
         String title2 = browserName.getTitle();
@@ -46,15 +46,16 @@ public class NavigationTests {
         WebDriver browserName = BrowserFactory.getDriver("chrome");
         browserName.manage().window().maximize();
         browserName.get("https://www.google.com/");
-        Thread.sleep(3);
+      //  Thread.sleep(3);
         String titleC = browserName.getTitle();
        // System.out.println(titleC);
         browserName.get("https://www.etsy.com/");
-        Thread.sleep(3);
+
         String titleEtsy = browserName.getTitle();
+        Thread.sleep(3);
        // System.out.println(titleEtsy);
         browserName.navigate().back();
-        Thread.sleep(3);
+
        String titleb = browserName.getTitle();
         StringUtility.verifyEquals(titleb,titleC);
         Thread.sleep(3);
